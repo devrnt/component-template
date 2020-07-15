@@ -1,23 +1,33 @@
 {
-  "name": "SvelteComponent",
-  "svelte": "src/index.js",
+  "name": "svelte-component",
+  "svelte": "src/index.ts",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "validate": "svelte-check",
     "prepublishOnly": "npm run build"
   },
-  "devDependencies": {
-    "@rollup/plugin-node-resolve": "^6.0.0",
-    "rollup": "^1.20.0",
-    "rollup-plugin-svelte": "^5.0.0",
-    "svelte": "^3.0.0"
-  },
-  "keywords": [
-    "svelte"
-  ],
   "files": [
     "src",
     "dist"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@rollup/plugin-typescript": "^5.0.2",
+    "@tsconfig/svelte": "^1.0.2",
+    "rollup": "^2.21.0",
+    "rollup-plugin-filesize": "^9.0.2",
+    "rollup-plugin-svelte": "^5.2.3",
+    "rollup-plugin-terser": "^6.1.0",
+    "svelte": "^3.24.0",
+    "svelte-check": "^0.1.51",
+    "svelte-preprocess": "^4.0.7",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.6"
+  },
+  "keywords": [
+    "svelte"
   ]
 }
